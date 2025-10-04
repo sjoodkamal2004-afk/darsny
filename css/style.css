@@ -1,0 +1,363 @@
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    
+}
+
+/** start main contact **/
+.main-contact h2{
+    color:#00434C;
+    font-weight: bold;
+    font-size: 30px;
+}
+.main-contact h3{
+    font-size: 24px;
+}
+.main-contact h4,h5,h6{
+    font-size: 20px;
+}
+.cards{
+    background-color: #E6ECED;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+
+}
+
+
+.cards:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+.info-card{
+    color: #00434C;
+    gap:20px;
+}
+.cards .icon i{
+    font-size: 30px;
+}
+.cards h4{
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reports .img {
+    margin-left: 30px; 
+}
+/** end main contact **/
+
+
+/** start Sidebar **/
+.sidebar{
+    background: linear-gradient(to bottom, #212D6A, #3CA3D3);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;          /* تحدد الجهة اللي بدك sidebar تكون فيها */
+    height: 100vh;
+    width: 250px;
+    direction: ltr;  
+    transform: translateX(0); /* افتراضياً يظهر */
+    transition: transform 0.3s ease;
+}
+.sidebar.active {
+  transform: translateX(0);
+}
+.sidebar .graduation i{
+    font-size: 40px;
+}
+.margin-top{
+    margin-top: 60px;
+}
+.user img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+.sidebar ul li a{
+    font-weight: lighter;
+    font-size: 20px;
+}
+/*Hamburger button */
+.menu-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: #00434C;
+  cursor: pointer;
+  display: none; /* يظهر بس على الشاشات الصغيرة */
+  z-index: 1101;
+}
+/* dark mood */
+.dark-mode-toggle {
+    margin-right: 119px;
+    z-index: 1000;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #darkSwitch {
+    display: none; /* يخفي الـ checkbox الحقيقي */
+  }
+  .toggle-label {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    transition: background-color 0.5s ease;
+  }
+  
+  .toggle-label .icon {
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  
+  .toggle-label .sun {
+    color: #f39c12;
+  }
+  
+  .toggle-label .moon {
+    color: #fff;
+  }
+  
+  /* الكرة المتحركة */
+  .toggle-label .ball {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  /* عند التفعيل */
+  #darkSwitch:checked + .toggle-label {
+    background: #000000;
+  }
+  
+  #darkSwitch:checked + .toggle-label .ball {
+    transform: translateX(27px);
+  }
+  body.dark-mode {
+    background-color: #000000;
+    color: #f1f1f1;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode .cards {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f1f1f1;
+  }
+  body.dark-mode .main-contact h2{
+  color: #f1f1f1;
+  
+} 
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+/** end Sidebar **/
+
+
+  /* Extra small (xs) */
+@media (max-width: 575.98px){
+  .sidebar{
+    transform: translateX(-100%); /* مخفي */ /* مخفي افتراضياً */
+  } 
+  .sidebar.active {
+    transform: translateX(0);  /* يظهر لما تنضاف الكلاس */
+  }
+  .content {
+    margin-right: 0;
+  }
+  .menu-toggle {
+    display: block;
+    margin-top: 9px
+  }
+  
+  .main-contact h2,h3{
+    display: flex;
+    justify-content: center;
+  }
+  .charts,
+  .cards{
+    margin-right: 30px;
+
+}
+  .chart-container2{
+    margin-top: 20px;
+  }
+  }
+  
+  /* small (sm) */
+  @media (min-width: 576px) and (max-width: 767.98px)
+{
+  .sidebar{
+    transform: translateX(-100%); /* مخفي */ /* مخفي افتراضياً */
+  } 
+  .sidebar.active {
+    transform: translateX(0);  /* يظهر لما تنضاف الكلاس */
+  }
+  .content {
+    margin-right: 0;
+  }
+  .menu-toggle {
+    display: block;
+    margin-top: 9px
+  }
+  .row {
+    display: flex;
+    justify-content: center; 
+  }
+  .main-contact h2,h3{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .main-contact h5{
+    font-size: 16px;
+  }
+ 
+  .chart-container2{
+    margin-top: 20px;
+  }
+  .reports{
+    width: 100%;
+  }
+  .reports .img {
+    margin-left: 2px; 
+  }
+  .technical-support-requests{
+    display: flex;
+    justify-content: center;
+  }
+  }
+  
+/* تابلت Medium (md)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidebar {
+    transform: translateX(-100%); /* مخفي افتراضياً */
+  }
+  .sidebar.active {
+    transform: translateX(0); /* يظهر لما تنضاف الكلاس */
+  }
+  .content {
+    margin-right: 0;
+  }
+  .menu-toggle {
+    display: block;
+    margin-top: 9px;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .main-contact h2,
+  .main-contact h3 {
+    display: flex;
+    justify-content: center;
+  }
+  .main-contact .icon i {
+    font-size: 20px;
+  }
+  .main-contact h5 {
+    font-size: 16px;
+  }
+  .teachers h5{
+    padding-bottom: 16px;
+  }
+  .cards {
+    width: 100%;
+    margin: 10px 0;
+    flex: 0 0 48%;
+    flex-direction: column; /* الصورة فوق */
+    align-items: center;     /* ✅ يخلي النص في النص */
+    text-align: center;      /* ✅ الكلام يصير بنص الكارد */
+    height: auto;
+    padding: 15px;
+  }
+
+  .reports {
+    width: 100%;
+  }
+  .reports .img {
+    margin-left: 5px;
+  }
+}
+
+/* لابتوب شاشة متوسطة Large (lg)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .sidebar {
+    transform: translateX(-100%); /* مخفي افتراضياً */
+  }
+  .sidebar.active {
+    transform: translateX(0); /* يظهر لما تنضاف الكلاس */
+  }
+  .content {
+    margin-right: 0;
+  }
+  .menu-toggle {
+    display: block;
+    margin-top: 9px;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .main-contact h2,
+  .main-contact h3 {
+    display: flex;
+    justify-content: center;
+  }
+  .main-contact .icon i {
+    font-size: 20px;
+  }
+  .main-contact h5 {
+    font-size: 16px;
+  }
+
+  .cards {
+    width: 100%;
+    margin: 10px 0;
+    flex: 0 0 48%;
+    flex-direction: column; /* الصورة فوق */
+    align-items: center;     /* ✅ النص بالمنتصف */
+    text-align: center;      /* ✅ الكلام بالنص */
+    height: auto;
+    padding: 20px;
+  }
+
+  .reports {
+    width: 100%;
+  }
+  .reports .img {
+    margin-left: 5px;
+  }
+}
